@@ -1,0 +1,54 @@
+# you can add CloudFormation resource templates here
+
+# Notes dynamodb table
+notesTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: notes-${self:provider.stage}
+    BillingMode: PAY_PER_REQUEST
+    AttributeDefinitions:
+      - AttributeName: notesId
+        AttributeType: S
+    KeySchema:
+      - AttributeName: notesId
+        KeyType: HASH
+
+# Cognito User Pool
+cognitoUserPool:
+  Type: AWS::Cognito::UserPool
+  Properties:
+    UserPoolName: myNotesUP_sls-${self:provider.stage}
+
+# UserPool Web client (Can also create multiple clients for same user pool)
+cognitoUserPoolWebClient:
+  Type: AWS::Cognito::UserPoolClient
+  Properties:
+    UserPoolId: !Ref cognitoUserPool
+    ClientName: web-${self:provider.stage}
+    AllowedOAuthFlows:
+      - implicit
+    AllowedOAuthFlowsUserPoolClient: true
+    CallbackURLs:
+      - http://localhost:3000/
+    AllowedOAuthScopes:
+      - phone
+      - email
+      - profile
+      - openid
+    SupportedIdentityProviders:
+      - COGNITO
+
+# cognitoUserPoolDomain
+cognitoUserPoolDomain:
+  Type: AWS::Cognito::UserPoolDomain
+  Properties:
+    Domain: mynotesslsdemo-${self:provider.stage}
+    UserPoolId: !Ref cognitoUserPool
+
+# parameter store
+userPoolArnParameter:
+  Type: AWS::SSM::Parameter
+  Properties:
+    Name: /notes/${self:provider.stage}/userPoolArn
+    Type: String
+    Value: !GetAtt cognitoUserPool.Arn

@@ -3,14 +3,19 @@ frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs12.x
-  stage: dev
+  runtime: nodejs14.x
+  lambdaHashingVersion: 20201221
+  stage: ${opt:stage, 'dev'}
   region: ap-south-1
 
 
 functions:
   authorizer:
     handler: authorizer.handler
+    environment:
+      COGNITO_USERPOOL_ID: !Ref cognitoUserPool
+      COGNITO_WEBCLIENT_ID: !Ref cognitoUserPoolWebClient
+
 
   createNote:
     handler: handler.createNote
@@ -74,26 +79,17 @@ functions:
       - http:
           method: get
           path: notes
-          authorizer: authorizer
+          authorizer: 
+            name: userPoolAuthorizer
+            type: COGNITO_USER_POOLS
+            arn: !GetAtt cognitoUserPool.Arn  # Works. By default, serverless expects lambda authoriser. so we have to mention type: COGNITO_USER_POOLS if we need to use this method.
+            # arn: ${ssm:/notes/${self:provider.stage}/userPoolId} # Works but first I need to deploy without this function. next I need to deploy with this function. to make sure that ssm parameter gets created
+            # arn: arn:aws:cognito-idp:ap-south-1:723314854221:userpool/ap-south-1_xwXRfCjoD
 
 # you can add CloudFormation resource templates here
 resources:
   Resources:
-    notesTable:
-      Type: AWS::DynamoDB::Table
-      Properties:
-        TableName: notes
-        BillingMode: PAY_PER_REQUEST
-        AttributeDefinitions:
-          - AttributeName: notesId
-            AttributeType: S
-        KeySchema:
-          - AttributeName: notesId
-            KeyType: HASH
-  Outputs:
-    NewOutput:
-      Description: "Description for the output"
-      Value: "Some output value"
+    ${file(resources.yml)}
 
 plugins:
   - serverless-iam-roles-per-function
