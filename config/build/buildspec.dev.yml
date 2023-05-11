@@ -4,8 +4,7 @@ phases:
   install:
     on-failure: ABORT
     runtime-versions:
-      runtime-versions:
-        nodejs: 14
+      nodejs: 14.x
     commands:
       - echo Installing serverless CLI
       - npm i -g serverless@2
