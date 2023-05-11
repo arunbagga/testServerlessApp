@@ -198,7 +198,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/notes/dev/1683720100042-2023-05-10T12:01:40.042Z/notes.zip"
+                "S3Key": "serverless/notes/dev/1683785826167-2023-05-11T06:17:06.167Z/notes.zip"
               },
               "Handler": "authorizer.handler",
               "Runtime": "nodejs14.x",
@@ -233,7 +233,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/notes/dev/1683720100042-2023-05-10T12:01:40.042Z/notes.zip"
+                "S3Key": "serverless/notes/dev/1683785826167-2023-05-11T06:17:06.167Z/notes.zip"
               },
               "Handler": "handler.createNote",
               "Runtime": "nodejs14.x",
@@ -267,7 +267,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/notes/dev/1683720100042-2023-05-10T12:01:40.042Z/notes.zip"
+                "S3Key": "serverless/notes/dev/1683785826167-2023-05-11T06:17:06.167Z/notes.zip"
               },
               "Handler": "handler.updateNote",
               "Runtime": "nodejs14.x",
@@ -301,7 +301,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/notes/dev/1683720100042-2023-05-10T12:01:40.042Z/notes.zip"
+                "S3Key": "serverless/notes/dev/1683785826167-2023-05-11T06:17:06.167Z/notes.zip"
               },
               "Handler": "handler.deleteNote",
               "Runtime": "nodejs14.x",
@@ -335,7 +335,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/notes/dev/1683720100042-2023-05-10T12:01:40.042Z/notes.zip"
+                "S3Key": "serverless/notes/dev/1683785826167-2023-05-11T06:17:06.167Z/notes.zip"
               },
               "Handler": "handler.readAllNote",
               "Runtime": "nodejs14.x",
@@ -362,54 +362,54 @@
               "ReadAllNotesLogGroup"
             ]
           },
-          "AuthorizerLambdaVersionAp5tKT1RAB5C0IVoxOy4kUyNElUMlu30qlPV404ngE": {
+          "AuthorizerLambdaVersionBPe25fR3iwtirltu3GdMTfftOUIPziQiwiXDUSM": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AuthorizerLambdaFunction"
               },
-              "CodeSha256": "F5UrUj/WXXfNB785pAUIFAL7QxhZZcgbcjEzIGZsbV0="
+              "CodeSha256": "Raq9N40QdRwd1PMPhPpyNqZXlN1ujGPIkvo/Ch3uR10="
             }
           },
-          "CreateNoteLambdaVersionqVKtw0b4Rg22u2JRfXr7DjnELgK6DAHAJ0uJ4RNevA": {
+          "CreateNoteLambdaVersion6CwFcLvT4UMVFyYJc2aEIpe2JQ7cQFD5YmGyRcVpfLc": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateNoteLambdaFunction"
               },
-              "CodeSha256": "F5UrUj/WXXfNB785pAUIFAL7QxhZZcgbcjEzIGZsbV0="
+              "CodeSha256": "Raq9N40QdRwd1PMPhPpyNqZXlN1ujGPIkvo/Ch3uR10="
             }
           },
-          "UpdateNoteLambdaVersionLP4cBgrzsvSQxazq3JZEe2fWcw90J3en1y5U2Z8QjBM": {
+          "UpdateNoteLambdaVersioncFOUZvpxZFLuGtjUxG73iqll5ZnMzpw7Mmc6RyIDtU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "UpdateNoteLambdaFunction"
               },
-              "CodeSha256": "F5UrUj/WXXfNB785pAUIFAL7QxhZZcgbcjEzIGZsbV0="
+              "CodeSha256": "Raq9N40QdRwd1PMPhPpyNqZXlN1ujGPIkvo/Ch3uR10="
             }
           },
-          "DeleteNoteLambdaVersion8Hagjkw5GEpuODU7CtuAnbFsGetCXATQCx9aHi8i8": {
+          "DeleteNoteLambdaVersion6V7VvIESuoEHH2Mb0sd42CDhLWbeLV5QskjEGGE8jkU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteNoteLambdaFunction"
               },
-              "CodeSha256": "F5UrUj/WXXfNB785pAUIFAL7QxhZZcgbcjEzIGZsbV0="
+              "CodeSha256": "Raq9N40QdRwd1PMPhPpyNqZXlN1ujGPIkvo/Ch3uR10="
             }
           },
-          "ReadAllNotesLambdaVersionVtxF286sylYYH2ErJsQ3v7GBGxY8E2WH7WMcniOlo8": {
+          "ReadAllNotesLambdaVersionzdE4efD4ANO7rziWzovzv9ByAEU3gpQNKpSuKv6A": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ReadAllNotesLambdaFunction"
               },
-              "CodeSha256": "F5UrUj/WXXfNB785pAUIFAL7QxhZZcgbcjEzIGZsbV0="
+              "CodeSha256": "Raq9N40QdRwd1PMPhPpyNqZXlN1ujGPIkvo/Ch3uR10="
             }
           },
           "ApiGatewayRestApi": {
@@ -693,7 +693,7 @@
               ]
             }
           },
-          "ApiGatewayDeployment1683720093923": {
+          "ApiGatewayDeployment1683785816825": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -1302,7 +1302,7 @@
           "AuthorizerLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AuthorizerLambdaVersionAp5tKT1RAB5C0IVoxOy4kUyNElUMlu30qlPV404ngE"
+              "Ref": "AuthorizerLambdaVersionBPe25fR3iwtirltu3GdMTfftOUIPziQiwiXDUSM"
             },
             "Export": {
               "Name": "sls-notes-dev-AuthorizerLambdaFunctionQualifiedArn"
@@ -1311,7 +1311,7 @@
           "CreateNoteLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateNoteLambdaVersionqVKtw0b4Rg22u2JRfXr7DjnELgK6DAHAJ0uJ4RNevA"
+              "Ref": "CreateNoteLambdaVersion6CwFcLvT4UMVFyYJc2aEIpe2JQ7cQFD5YmGyRcVpfLc"
             },
             "Export": {
               "Name": "sls-notes-dev-CreateNoteLambdaFunctionQualifiedArn"
@@ -1320,7 +1320,7 @@
           "UpdateNoteLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "UpdateNoteLambdaVersionLP4cBgrzsvSQxazq3JZEe2fWcw90J3en1y5U2Z8QjBM"
+              "Ref": "UpdateNoteLambdaVersioncFOUZvpxZFLuGtjUxG73iqll5ZnMzpw7Mmc6RyIDtU"
             },
             "Export": {
               "Name": "sls-notes-dev-UpdateNoteLambdaFunctionQualifiedArn"
@@ -1329,7 +1329,7 @@
           "DeleteNoteLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteNoteLambdaVersion8Hagjkw5GEpuODU7CtuAnbFsGetCXATQCx9aHi8i8"
+              "Ref": "DeleteNoteLambdaVersion6V7VvIESuoEHH2Mb0sd42CDhLWbeLV5QskjEGGE8jkU"
             },
             "Export": {
               "Name": "sls-notes-dev-DeleteNoteLambdaFunctionQualifiedArn"
@@ -1338,7 +1338,7 @@
           "ReadAllNotesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ReadAllNotesLambdaVersionVtxF286sylYYH2ErJsQ3v7GBGxY8E2WH7WMcniOlo8"
+              "Ref": "ReadAllNotesLambdaVersionzdE4efD4ANO7rziWzovzv9ByAEU3gpQNKpSuKv6A"
             },
             "Export": {
               "Name": "sls-notes-dev-ReadAllNotesLambdaFunctionQualifiedArn"
@@ -1478,7 +1478,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "AuthorizerLambdaVersionAp5tKT1RAB5C0IVoxOy4kUyNElUMlu30qlPV404ngE"
+        "versionLogicalId": "AuthorizerLambdaVersionBPe25fR3iwtirltu3GdMTfftOUIPziQiwiXDUSM"
       },
       "createNote": {
         "handler": "handler.createNote",
@@ -1516,7 +1516,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "CreateNoteLambdaVersionqVKtw0b4Rg22u2JRfXr7DjnELgK6DAHAJ0uJ4RNevA"
+        "versionLogicalId": "CreateNoteLambdaVersion6CwFcLvT4UMVFyYJc2aEIpe2JQ7cQFD5YmGyRcVpfLc"
       },
       "updateNote": {
         "handler": "handler.updateNote",
@@ -1554,7 +1554,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "UpdateNoteLambdaVersionLP4cBgrzsvSQxazq3JZEe2fWcw90J3en1y5U2Z8QjBM"
+        "versionLogicalId": "UpdateNoteLambdaVersioncFOUZvpxZFLuGtjUxG73iqll5ZnMzpw7Mmc6RyIDtU"
       },
       "deleteNote": {
         "handler": "handler.deleteNote",
@@ -1592,7 +1592,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "DeleteNoteLambdaVersion8Hagjkw5GEpuODU7CtuAnbFsGetCXATQCx9aHi8i8"
+        "versionLogicalId": "DeleteNoteLambdaVersion6V7VvIESuoEHH2Mb0sd42CDhLWbeLV5QskjEGGE8jkU"
       },
       "readAllNotes": {
         "handler": "handler.readAllNote",
@@ -1636,7 +1636,7 @@
         "timeout": 6,
         "runtime": "nodejs14.x",
         "vpc": {},
-        "versionLogicalId": "ReadAllNotesLambdaVersionVtxF286sylYYH2ErJsQ3v7GBGxY8E2WH7WMcniOlo8"
+        "versionLogicalId": "ReadAllNotesLambdaVersionzdE4efD4ANO7rziWzovzv9ByAEU3gpQNKpSuKv6A"
       }
     },
     "resources": {
@@ -1739,7 +1739,7 @@
     "artifact": "C:\\Users\\arun.bagga\\HDW_Project\\testServerlessApp\\notes\\.serverless\\notes.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/notes/dev/1683720100042-2023-05-10T12:01:40.042Z",
+    "artifactDirectoryName": "serverless/notes/dev/1683785826167-2023-05-11T06:17:06.167Z",
     "artifact": "notes.zip"
   }
 }
