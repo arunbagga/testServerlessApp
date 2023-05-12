@@ -15,7 +15,6 @@ phases:
     commands:
       - echo Deploying resources
       - serverless deploy --stage dev
-
 artifacts:
   files:
     - my-artifact/*
